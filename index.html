@@ -44,15 +44,15 @@
 @font-face{font-display:swap}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
-  --bg:#070B1F;
-  --surface:#0D1330;
-  --surface2:#131A42;
+  --bg:#05060B;
+  --surface:#0D0F1A;
+  --surface2:#12141F;
   --accent:#00C2FF;
   --accent2:#0066FF;
   --accent3:#5B4FE9;
   --text:#F1F3FC;
   --muted:#8B93B8;
-  --border:rgba(130,160,255,0.10);
+  --border:rgba(130,160,255,0.09);
 }
 html{scroll-behavior:smooth;-webkit-overflow-scrolling:touch}
 body{min-height:100%}
@@ -96,7 +96,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:1rem 2.5rem;display:
 .lang-toggle{display:flex;gap:3px;background:var(--surface2);border-radius:6px;padding:3px}
 .lang-btn{background:transparent;border:none;color:var(--muted);padding:.25rem .6rem;border-radius:4px;cursor:pointer;font-size:.78rem;font-family:"Inter",sans-serif;transition:all .3s}
 .lang-btn.active{background:linear-gradient(90deg,#00C2FF,#0066FF);color:#fff}
-.nav-cta{background:linear-gradient(90deg,#00C2FF,#0066FF);color:#fff;padding:.45rem 1.1rem;border-radius:6px;text-decoration:none;font-size:.83rem;font-weight:500;cursor:pointer;border:none;transition:opacity .3s}
+.nav-cta{background:linear-gradient(90deg,#00C2FF,#0066FF);color:#fff;padding:.45rem 1.1rem;border-radius:6px;text-decoration:none;font-size:.83rem;font-weight:500;cursor:pointer;border:none;transition:opacity .3s,box-shadow .3s;box-shadow:0 2px 14px rgba(0,194,255,.2)}
+.nav-cta:hover{box-shadow:0 4px 20px rgba(0,194,255,.4)}
 .nav-cta:hover{opacity:.85}
 .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:.25rem;background:none;border:none}
 .hamburger span{display:block;width:22px;height:2px;background:var(--text);border-radius:2px;transition:all .3s}
@@ -154,7 +155,8 @@ body.funnel-mode .funnel-exit-link{display:inline-block}
 .hero-role strong{color:var(--text)}
 .hero-bio{max-width:500px;color:var(--muted);font-size:.9rem;line-height:1.9;margin-bottom:2.25rem}
 .hero-actions{display:flex;gap:.85rem;flex-wrap:wrap;margin-bottom:2.75rem}
-.btn-primary{background:linear-gradient(90deg,#00C2FF,#0066FF);color:#fff;padding:.65rem 1.6rem;border-radius:8px;text-decoration:none;font-weight:500;font-size:.875rem;transition:transform .15s,opacity .15s;display:inline-flex;align-items:center;gap:.4rem;border:none;cursor:pointer}
+.btn-primary{background:linear-gradient(90deg,#00C2FF,#0066FF);color:#fff;padding:.65rem 1.6rem;border-radius:8px;text-decoration:none;font-weight:500;font-size:.875rem;transition:transform .15s,opacity .15s,box-shadow .25s;display:inline-flex;align-items:center;gap:.4rem;border:none;cursor:pointer;box-shadow:0 4px 20px rgba(0,194,255,.22)}
+.btn-primary:hover{box-shadow:0 8px 30px rgba(0,194,255,.4)}
 .btn-primary:hover{opacity:.9;transform:translateY(-1px)}
 .btn-secondary{border:1px solid var(--border);color:var(--text);padding:.65rem 1.6rem;border-radius:8px;text-decoration:none;font-weight:500;font-size:.875rem;transition:background .15s,border-color .2s;display:inline-flex;align-items:center;gap:.4rem;background:transparent;cursor:pointer}
 .btn-secondary:hover{background:var(--surface);border-color:rgba(255,255,255,.15)}
@@ -192,7 +194,7 @@ body.funnel-mode .funnel-exit-link{display:inline-block}
 .quote-attr{font-size:.72rem;color:var(--muted);margin-top:.6rem}
 .who-label{font-size:.7rem;letter-spacing:.12em;color:var(--muted);text-transform:uppercase;margin:1.5rem 0 .85rem}
 .who-item{display:flex;gap:.75rem;margin-bottom:.85rem;padding:1rem 1.1rem;background:var(--surface);border:1px solid var(--border);border-radius:10px;transition:border-color .3s}
-.who-item:hover{border-color:rgba(0,194,255,.25)}
+.who-item:hover{border-color:rgba(0,194,255,.25);box-shadow:0 8px 24px rgba(0,194,255,.1)}
 .who-icon{font-size:1.1rem;flex-shrink:0;margin-top:.1rem}
 .who-head{font-size:.85rem;font-weight:600;color:var(--text);margin-bottom:.2rem}
 .who-desc{font-size:.78rem;color:var(--muted);line-height:1.65}
@@ -238,7 +240,7 @@ body.funnel-mode .funnel-exit-link{display:inline-block}
 .client-sector{font-size:.7rem;color:var(--muted)}
 .content-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem;margin-top:2.5rem}
 .content-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;overflow:hidden;transition:transform .3s,border-color .2s;cursor:pointer}
-.content-card:hover{transform:translateY(-3px);border-color:rgba(0,194,255,.3)}
+.content-card:hover{transform:translateY(-3px);border-color:rgba(0,194,255,.3);box-shadow:0 14px 32px rgba(0,194,255,.12)}
 .content-thumb{aspect-ratio:4/5;background:var(--surface2);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;padding:1.25rem}
 .content-arabic{font-family:"Cairo",sans-serif;font-size:1rem;font-weight:700;color:var(--text);line-height:1.5;direction:rtl;text-align:center;position:relative;z-index:1}
 .content-grd{position:absolute;inset:0;background:linear-gradient(135deg,rgba(0,194,255,.08),transparent)}
@@ -500,6 +502,134 @@ body.funnel-mode .funnel-exit-link{display:inline-block}
   transition: width .1s;
   width: 0%;
 }
+
+
+/* ============ WHITE / BLACK SECTION RHYTHM ============
+   Sections with class="theme-light" are white; all others stay black.
+   To flip any section, add or remove class="theme-light" on its <section> tag.
+   Blue accents (#00C2FF / #0066FF / #5B4FE9, gradients, buttons, glows) are unchanged. */
+.theme-light{
+  --bg:#FFFFFF;
+  --surface:#E3E8F4;
+  --surface2:#DCE3F2;
+  --text:#0A0D1A;
+  --muted:#4A5170;
+  --border:rgba(10,20,60,.14);
+  color:var(--text);
+}
+:is(#section-about,#section-repurposing,#section-pillars,#section-work,#section-coaching).theme-light{
+  background-color:#FFFFFF;
+  background-image:
+    radial-gradient(circle at 10% 15%, rgba(0,194,255,.10), transparent 40%),
+    radial-gradient(circle at 90% 80%, rgba(0,102,255,.07), transparent 42%),
+    radial-gradient(rgba(10,20,60,.07) 1px, transparent 1.4px);
+  background-size:auto,auto,26px 26px;
+  background-attachment:fixed;
+  background-repeat:no-repeat,no-repeat,repeat;
+}
+/* hard-coded light text from the dark theme */
+.theme-light .pillar-title{color:var(--text)}
+.theme-light .pillar-desc{color:var(--muted)}
+.theme-light .section-title{text-shadow:none}
+/* small blue TEXT needs more contrast on white: use the palette's own deeper blue */
+.theme-light .section-label,
+.theme-light .pillar-label,
+.theme-light [style*="color:#00C2FF"]{color:#0066FF!important}
+/* soft depth for cards on white */
+.theme-light .who-item,
+.theme-light .quote-card,
+.theme-light .client-card,
+.theme-light .content-card,
+.theme-light .tag{box-shadow:0 6px 22px rgba(10,20,60,.06)}
+.theme-light .btn-secondary:hover{border-color:rgba(0,102,255,.35)}
+/* ===== Content Distribution hero: dark brand card + animated "1 episode -> many posts" scene ===== */
+.hero-dark{
+  --bg:#05060B; --surface:#0D0F1A; --surface2:#12141F;
+  --text:#F1F3FC; --muted:#8B93B8; --border:rgba(130,160,255,.14);
+  color:var(--text);
+}
+.theme-light .hero-dark .section-label{color:#00C2FF!important}
+.theme-light .hero-dark .btn-secondary{border-color:rgba(130,160,255,.3);color:#F1F3FC;background:rgba(255,255,255,.03)}
+.theme-light .hero-dark .btn-secondary:hover{background:rgba(0,194,255,.1);border-color:rgba(0,194,255,.55)}
+.rp-visual{position:relative;width:100%;max-width:340px;aspect-ratio:340/300;margin:2rem auto 0;pointer-events:none}
+@media(min-width:1000px){.rp-visual{position:absolute;top:50%;inset-inline-end:2.5rem;margin:0;width:340px;transform:translateY(-50%)}}
+.rp-visual svg.rp-lines{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.rp-line{stroke:rgba(0,194,255,.45);stroke-width:1.4;stroke-dasharray:4 6;fill:none;animation:rpDash 1.2s linear infinite}
+@keyframes rpDash{to{stroke-dashoffset:-20}}
+.rp-chip{position:absolute;width:96px;display:flex;align-items:center;gap:.4rem;padding:.5rem .65rem;border-radius:10px;background:rgba(13,15,26,.92);border:1px solid rgba(0,194,255,.35);box-shadow:0 8px 24px rgba(0,194,255,.14);font-size:.72rem;font-weight:600;color:#F1F3FC;animation:rpFloat 4s ease-in-out infinite}
+.rp-chip svg{width:15px;height:15px;flex-shrink:0}
+.rp-chip.c1{left:0;top:4%}
+.rp-chip.c2{right:0;top:10%;animation-delay:-1s}
+.rp-chip.c3{left:0;bottom:4%;animation-delay:-2s}
+.rp-chip.c4{right:0;bottom:0;animation-delay:-3s}
+@keyframes rpFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+.rp-core{position:absolute;left:50%;top:50%;width:124px;transform:translate(-50%,-50%);padding:.8rem .7rem;border-radius:14px;background:linear-gradient(160deg,#12141F,#0A0D18);border:1px solid rgba(0,194,255,.55);text-align:center;animation:rpGlow 3s ease-in-out infinite}
+@keyframes rpGlow{0%,100%{box-shadow:0 0 0 0 rgba(0,194,255,.35),0 10px 30px rgba(0,102,255,.25)}50%{box-shadow:0 0 0 10px rgba(0,194,255,0),0 10px 30px rgba(0,102,255,.25)}}
+.rp-core-label{font-size:.72rem;font-weight:700;color:#F1F3FC;margin-top:.45rem;display:block}
+.rp-wave{display:flex;align-items:center;justify-content:center;gap:3px;height:28px}
+.rp-wave i{display:block;width:4px;height:100%;border-radius:2px;background:linear-gradient(180deg,#00C2FF,#0066FF);transform-origin:center;animation:rpWave 1s ease-in-out infinite}
+.rp-wave i:nth-child(1){animation-delay:-.1s}.rp-wave i:nth-child(2){animation-delay:-.4s}.rp-wave i:nth-child(3){animation-delay:-.2s}
+.rp-wave i:nth-child(4){animation-delay:-.6s}.rp-wave i:nth-child(5){animation-delay:-.3s}.rp-wave i:nth-child(6){animation-delay:-.7s}.rp-wave i:nth-child(7){animation-delay:-.5s}
+@keyframes rpWave{0%,100%{transform:scaleY(.25)}50%{transform:scaleY(1)}}
+.rp-pill{position:absolute;left:50%;top:80%;transform:translateX(-50%);padding:.25rem .7rem;border-radius:20px;font-size:.68rem;font-weight:700;background:linear-gradient(90deg,#00C2FF,#0066FF);color:#fff;white-space:nowrap;animation:rpPulse 2s ease-in-out infinite}
+@keyframes rpPulse{0%,100%{opacity:.85;transform:translateX(-50%) scale(1)}50%{opacity:1;transform:translateX(-50%) scale(1.06)}}
+@media(prefers-reduced-motion:reduce){.rp-line,.rp-chip,.rp-core,.rp-wave i,.rp-pill{animation:none}}
+/* ===== Floating engagement cards ===== */
+.float-card{animation:fcFloat 5s ease-in-out infinite;box-shadow:0 14px 36px rgba(10,30,90,.14);transition:box-shadow .3s,border-color .3s;will-change:transform}
+.float-card.fc2{animation-delay:-1.7s;box-shadow:0 18px 44px rgba(0,150,255,.22)}
+.float-card.fc3{animation-delay:-3.4s}
+@keyframes fcFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+.float-card:hover{animation-play-state:paused;box-shadow:0 22px 52px rgba(0,150,255,.32);border-color:rgba(0,194,255,.6)!important}
+@media(prefers-reduced-motion:reduce){.float-card{animation:none}}
+/* ===== FAQ accordion ===== */
+.faq-item{cursor:pointer;transition:border-color .25s,box-shadow .25s}
+.faq-item:hover,.faq-item[open]{border-color:rgba(0,194,255,.5)!important;box-shadow:0 8px 24px rgba(0,150,255,.12)}
+.faq-q{list-style:none;display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.faq-q::-webkit-details-marker{display:none}
+.faq-q p{margin:0!important;flex:1}
+.faq-chev{flex-shrink:0;transition:transform .3s}
+.faq-item[open] .faq-chev{transform:rotate(180deg)}
+.faq-a{padding-top:.7rem;animation:faqIn .3s ease}
+.faq-a p{margin:0}
+@keyframes faqIn{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+/* dark panel behind the floating cards so they stand out */
+.hero-dark.dark-panel{--surface:#151A2E;--surface2:#1A2036;--border:rgba(130,160,255,.2)}
+.dark-panel .float-card{box-shadow:0 16px 40px rgba(0,0,0,.5)}
+.dark-panel .float-card.fc2{box-shadow:0 18px 48px rgba(0,150,255,.3)}
+.dark-panel .float-card:hover{box-shadow:0 22px 56px rgba(0,194,255,.4)}
+/* ===== "Why not ChatGPT" card: generic list vs. 30-day sequence ===== */
+.wc-visual{position:relative;width:100%;max-width:300px;margin:0 0 1.75rem;pointer-events:none}
+@media(min-width:1100px){.wc-visual{position:absolute;top:2.5rem;inset-inline-end:2.5rem;margin:0;width:300px}}
+.wc-box{border-radius:12px;padding:.85rem 1rem;background:rgba(13,15,26,.85);border:1px solid rgba(130,160,255,.14)}
+.wc-box.on{border-color:rgba(0,194,255,.45);box-shadow:0 0 30px rgba(0,194,255,.12);animation:wcBox 6s ease-in-out infinite}
+@keyframes wcBox{0%,100%{box-shadow:0 0 18px rgba(0,194,255,.08)}50%{box-shadow:0 0 34px rgba(0,194,255,.28)}}
+.wc-tag{display:block;font-size:.66rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#8B93B8;margin-bottom:.55rem}
+.wc-box.on .wc-tag{color:#00C2FF}
+.wc-bars{display:flex;flex-direction:column;gap:6px}
+.wc-bars i{display:block;height:6px;border-radius:3px;background:rgba(139,147,184,.28);animation:wcJitter 2.4s ease-in-out infinite}
+.wc-bars i:nth-child(1){width:92%}.wc-bars i:nth-child(2){width:70%;animation-delay:-.6s}.wc-bars i:nth-child(3){width:84%;animation-delay:-1.2s}
+@keyframes wcJitter{0%,100%{transform:translateX(0);opacity:.7}50%{transform:translateX(5px);opacity:.35}}
+.wc-arrow{display:flex;justify-content:center;margin:.4rem 0;color:#00C2FF;animation:wcDrop 1.6s ease-in-out infinite}
+@keyframes wcDrop{0%,100%{transform:translateY(-2px);opacity:.5}50%{transform:translateY(3px);opacity:1}}
+.wc-grid{display:grid;grid-template-columns:repeat(10,1fr);gap:4px}
+.wc-grid i{display:block;aspect-ratio:1;border-radius:3px;background:rgba(0,194,255,.14);animation:wcOn 6s ease-in-out infinite;animation-delay:calc(var(--i)*.1s)}
+@keyframes wcOn{0%,3%{background:rgba(0,194,255,.14);box-shadow:none}8%,62%{background:linear-gradient(135deg,#00C2FF,#0066FF);box-shadow:0 0 8px rgba(0,194,255,.55)}72%,100%{background:rgba(0,194,255,.14);box-shadow:none}}
+@media(prefers-reduced-motion:reduce){.wc-box.on,.wc-bars i,.wc-arrow,.wc-grid i{animation:none}.wc-grid i{background:linear-gradient(135deg,#00C2FF,#0066FF)}}
+/* keep intentionally dark tiles (video/phone frames, image cards) black inside white sections */
+.theme-light .content-thumb,
+.theme-light .pillar-img,
+.theme-light [style*="#050810"],
+.theme-light [style*="#05060B"],
+.theme-light [style*="#0A0D14"],
+.theme-light [style*="#111"],
+.theme-light [style*="#0f0f0f"]{
+  --bg:#05060B; --surface:#0D0F1A; --surface2:#12141F;
+  --text:#F1F3FC; --muted:#8B93B8; --border:rgba(130,160,255,.09);
+  color:#F1F3FC;
+}
+.theme-light .content-thumb [style*="color:#00C2FF"],
+.theme-light [style*="#050810"] [style*="color:#00C2FF"],
+.theme-light [style*="#0A0D14"] [style*="color:#00C2FF"]{color:#00C2FF!important}
 
 </style>
 
@@ -868,15 +998,12 @@ body.funnel-mode .funnel-exit-link{display:inline-block}
         </div>
       </div>
 
-    <div class="section-footer" style="position:relative;z-index:2">
-      <p class="footer-copy">© 2026 Youssuf Walid</p>
-      <p class="footer-brand">HALAL REELS<span>.</span></p>
-    </div>
+    
     </div><!-- close z-index wrapper -->
 </section>
 
 <hr class="section-divider"/>
-<section id="section-about">
+<section id="section-about" class="theme-light">
   <div class="section-wrap">
     <p class="section-label en">About</p>
     <p class="section-label ar" style="font-family:Cairo,sans-serif;direction:rtl;display:none">عني</p>
@@ -911,8 +1038,7 @@ body.funnel-mode .funnel-exit-link{display:inline-block}
         <div class="who-item"><div class="who-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#00C2FF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block;vertical-align:-0.15em" ><path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M6 12v5c0 1.5 3 3 6 3s6-1.5 6-3v-5"/><path d="M22 10v6"/></svg></div><div><div class="who-head en">Employees & Talent</div><div class="who-head ar" style="font-family:Cairo,sans-serif;display:none">الموظفون</div><div class="who-desc en">Use AI to position as thought leaders inside their companies.</div><div class="who-desc ar" style="font-family:Cairo,sans-serif;direction:rtl;display:none">يستخدموا AI للتمركز كـ thought leaders من داخل الشركة.</div></div></div>
       </div>
     </div>
-    <div class="section-footer"><p class="footer-copy">© 2026 Youssuf Walid</p><p class="footer-brand">HALAL REELS<span>.</span></p>
-  </div>
+    
 </section>
 
 <hr class="section-divider"/>
@@ -993,26 +1119,26 @@ body.funnel-mode .funnel-exit-link{display:inline-block}
       <a href="#section-contact" onclick="document.getElementById('section-contact').scrollIntoView({behavior:'smooth'});return false;" class="btn-primary en">↗ See the System In Action</a>
       <a href="#section-contact" onclick="document.getElementById('section-contact').scrollIntoView({behavior:'smooth'});return false;" class="btn-primary ar" style="font-family:Cairo,sans-serif;direction:rtl;display:none">↗ شوف السيستم شغال إزاي</a>
     </div>
-    <div class="section-footer"><p class="footer-copy">© 2026 Youssuf Walid</p><p class="footer-brand">HALAL REELS<span>.</span></p>
-  </div>
+    
 </section>
 
 <hr class="section-divider"/>
-<section id="section-repurposing">
+<section id="section-repurposing" class="theme-light">
   <div class="section-wrap">
 
     <!-- HERO BANNER -->
-    <div style="background:linear-gradient(135deg,rgba(0,194,255,.1),rgba(0,102,255,.05));border:1px solid rgba(0,194,255,.2);border-radius:20px;padding:3rem 2.5rem;margin-bottom:3rem;position:relative;overflow:hidden">
-      <div style="position:absolute;top:-50px;right:-50px;width:250px;height:250px;background:radial-gradient(circle,rgba(0,194,255,.12),transparent 70%);pointer-events:none"></div>
+    <div class="hero-dark" style="background:radial-gradient(circle at 85% 20%,rgba(0,194,255,.16),transparent 45%),radial-gradient(circle at 10% 100%,rgba(0,102,255,.14),transparent 50%),linear-gradient(135deg,#0D0F1A,#05060B);border:1px solid rgba(0,194,255,.3);border-radius:20px;padding:3rem 2.5rem;margin-bottom:3rem;position:relative;overflow:hidden;box-shadow:0 20px 60px rgba(0,20,80,.25)">
+      <div style="position:absolute;top:-50px;right:-50px;width:250px;height:250px;background:radial-gradient(circle,rgba(0,194,255,.22),transparent 70%);pointer-events:none"></div>
+      <div class="rp-visual" aria-hidden="true"><svg class="rp-lines" viewBox="0 0 340 300"><path class="rp-line" d="M170 150 L48 31"/><path class="rp-line" d="M170 150 L292 47"/><path class="rp-line" d="M170 150 L48 269"/><path class="rp-line" d="M170 150 L292 283"/><circle r="3.5" fill="#00C2FF"><animateMotion dur="2.4s" begin="0s" repeatCount="indefinite" path="M170 150 L48 31"/></circle><circle r="3.5" fill="#00C2FF"><animateMotion dur="2.4s" begin="0.6s" repeatCount="indefinite" path="M170 150 L292 47"/></circle><circle r="3.5" fill="#00C2FF"><animateMotion dur="2.4s" begin="1.2s" repeatCount="indefinite" path="M170 150 L48 269"/></circle><circle r="3.5" fill="#00C2FF"><animateMotion dur="2.4s" begin="1.8s" repeatCount="indefinite" path="M170 150 L292 283"/></circle></svg><div class="rp-core"><div class="rp-wave"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><span class="rp-core-label en">1 Episode</span><span class="rp-core-label ar" style="font-family:Cairo,sans-serif;display:none">حلقة واحدة</span></div><div class="rp-chip c1"><svg viewBox="0 0 24 24" fill="none" stroke="#00C2FF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="m10.5 9.5 4 2.5-4 2.5Z"/></svg><span class="en">Reel</span><span class="ar" style="font-family:Cairo,sans-serif;display:none">ريلز</span></div><div class="rp-chip c2"><svg viewBox="0 0 24 24" fill="none" stroke="#00C2FF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="13" height="13" rx="2"/><path d="M8 3h11a2 2 0 0 1 2 2v11"/></svg><span class="en">Carousel</span><span class="ar" style="font-family:Cairo,sans-serif;display:none">كاروسيل</span></div><div class="rp-chip c3"><svg viewBox="0 0 24 24" fill="none" stroke="#00C2FF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M4 12h16M4 17h10"/></svg><span class="en">Caption</span><span class="ar" style="font-family:Cairo,sans-serif;display:none">كابشن</span></div><div class="rp-chip c4"><svg viewBox="0 0 24 24" fill="none" stroke="#00C2FF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 5.6a5 5 0 0 0-7.1 0L12 7.3l-1.7-1.7a5 5 0 0 0-7.1 7.1L12 21.5l8.8-8.8a5 5 0 0 0 0-7.1Z"/></svg><span class="en">Post</span><span class="ar" style="font-family:Cairo,sans-serif;display:none">بوست</span></div><div class="rp-pill"><span class="en">30 days of content</span><span class="ar" style="font-family:Cairo,sans-serif;display:none">٣٠ يوم محتوى</span></div></div>
       <p class="section-label en" style="margin-bottom:1rem">Content Distribution</p>
       <p class="section-label ar" style="font-family:Cairo,sans-serif;direction:rtl;display:none;margin-bottom:1rem">توزيع المحتوى</p>
-      <h2 style="font-family:'Space Grotesk',sans-serif;font-size:clamp(1.8rem,4vw,3rem);font-weight:700;letter-spacing:-.03em;line-height:1.1;margin-bottom:1rem;max-width:640px" class="en">Turn One Conversation Into 30 Days of Content.</h2>
+      <h2 style="font-family:'Space Grotesk',sans-serif;font-size:clamp(1.8rem,4vw,3rem);font-weight:700;letter-spacing:-.03em;line-height:1.1;margin-bottom:1rem;max-width:640px;text-shadow:0 0 50px rgba(0,194,255,.18)" class="en">Turn One Conversation Into 30 Days of Content.</h2>
       <h2 style="font-family:Cairo,sans-serif;font-size:clamp(1.6rem,4vw,2.6rem);font-weight:700;line-height:1.3;margin-bottom:1rem;direction:rtl;display:none;max-width:640px" class="ar">حوّل تسجيل واحد لشهر كامل من المحتوى.</h2>
       <p style="color:var(--muted);font-size:1rem;line-height:1.9;max-width:600px" class="en">Send us one podcast episode, YouTube video, webinar, or interview. We extract the ideas, arguments, and moments worth repeating — and turn them into a full month of short-form videos, carousels, captions, and long-form posts, built around a clear publishing direction. One file in. A content system out.</p>
       <p style="color:var(--muted);font-size:1rem;line-height:2;max-width:600px;font-family:Cairo,sans-serif;direction:rtl;display:none" class="ar">ابعتلنا حلقة بودكاست، فيديو يوتيوب، ويبينار، أو مقابلة. إحنا بنستخرج الأفكار والحجج واللحظات اللي تستاهل تتكرر — ونحولها لشهر كامل من الفيديوهات القصيرة، الكاروسيلات، الكابشنز، والبوستات الطويلة، على خطة نشر واضحة. ملف واحد يدخل. نظام محتوى كامل يطلع.</p>
       <div style="display:flex;gap:.85rem;flex-wrap:wrap;margin-top:1.75rem">
-        <a href="https://wa.me/201022996822" target="_blank" class="btn-primary en" style="text-decoration:none;background:linear-gradient(90deg,#25D366,#128C7E)"><svg viewBox="0 0 24 24" fill="none" stroke="#00C2FF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block;vertical-align:-0.15em"><path d="M21 11.5a8.5 8.5 0 0 1-8.5 8.5 8.4 8.4 0 0 1-4-1L3 20l1.1-4.2A8.4 8.4 0 0 1 3 11.5 8.5 8.5 0 0 1 11.5 3 8.5 8.5 0 0 1 21 11.5Z"/></svg> Send Us Your Next Episode</a>
-        <a href="https://wa.me/201022996822" target="_blank" class="btn-primary ar" style="font-family:Cairo,sans-serif;display:none;text-decoration:none;background:linear-gradient(90deg,#25D366,#128C7E)"><svg viewBox="0 0 24 24" fill="none" stroke="#00C2FF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block;vertical-align:-0.15em"><path d="M21 11.5a8.5 8.5 0 0 1-8.5 8.5 8.4 8.4 0 0 1-4-1L3 20l1.1-4.2A8.4 8.4 0 0 1 3 11.5 8.5 8.5 0 0 1 11.5 3 8.5 8.5 0 0 1 21 11.5Z"/></svg> ابعتلنا الحلقة الجاية</a>
+        <a href="https://wa.me/201022996822" target="_blank" class="btn-primary en" style="text-decoration:none"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block;vertical-align:-0.15em"><path d="M21 11.5a8.5 8.5 0 0 1-8.5 8.5 8.4 8.4 0 0 1-4-1L3 20l1.1-4.2A8.4 8.4 0 0 1 3 11.5 8.5 8.5 0 0 1 11.5 3 8.5 8.5 0 0 1 21 11.5Z"/></svg> Send Us Your Next Episode</a>
+        <a href="https://wa.me/201022996822" target="_blank" class="btn-primary ar" style="font-family:Cairo,sans-serif;display:none;text-decoration:none"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block;vertical-align:-0.15em"><path d="M21 11.5a8.5 8.5 0 0 1-8.5 8.5 8.4 8.4 0 0 1-4-1L3 20l1.1-4.2A8.4 8.4 0 0 1 3 11.5 8.5 8.5 0 0 1 11.5 3 8.5 8.5 0 0 1 21 11.5Z"/></svg> ابعتلنا الحلقة الجاية</a>
         <a class="btn-secondary en" href="#repurposing-pricing" onclick="document.getElementById('repurposing-pricing').scrollIntoView({behavior:'smooth'});return false;">↗ See Pricing</a>
         <a class="btn-secondary ar" style="font-family:Cairo,sans-serif;display:none" href="#repurposing-pricing" onclick="document.getElementById('repurposing-pricing').scrollIntoView({behavior:'smooth'});return false;">↗ شوف الأسعار</a>
       </div>
@@ -1039,6 +1165,7 @@ body.funnel-mode .funnel-exit-link{display:inline-block}
     </div>
 
     <!-- HOW IT WORKS -->
+    <div class="hero-dark dark-panel" style="background:radial-gradient(circle at 90% 0%,rgba(0,194,255,.14),transparent 45%),radial-gradient(circle at 0% 100%,rgba(0,102,255,.12),transparent 50%),linear-gradient(135deg,#0D0F1A,#05060B);border:1px solid rgba(0,194,255,.3);border-radius:20px;padding:2.5rem 2rem 1.5rem;margin:1rem 0 3rem;position:relative;overflow:hidden;box-shadow:0 20px 60px rgba(0,20,80,.25)">
     <p class="section-label en">How It Works</p>
     <p class="section-label ar" style="font-family:Cairo,sans-serif;direction:rtl;display:none">إزاي بيشتغل</p>
     <h3 style="font-family:'Space Grotesk',sans-serif;font-size:1.5rem;font-weight:700;letter-spacing:-.02em;margin-bottom:2rem" class="en">Three steps. That's it.</h3>
@@ -1067,6 +1194,7 @@ body.funnel-mode .funnel-exit-link{display:inline-block}
         <p style="font-size:.82rem;color:var(--muted);line-height:1.9;font-family:Cairo,sans-serif;direction:rtl;display:none" class="ar">باكدج كامل بخطة نشر لمدة 30 يوم، جاهز تسلّمه للإديتور أو الـ VA أو تنفذه بنفسك.</p>
       </div>
     </div>
+    </div><!-- /how-it-works panel -->
 
     <!-- DELIVERABLES -->
     <p class="section-label en">What You Get</p>
@@ -1135,8 +1263,9 @@ body.funnel-mode .funnel-exit-link{display:inline-block}
     </div>
 
     <!-- WHY NOT CHATGPT -->
-    <div style="background:linear-gradient(135deg,#001A3D,#0A1628);border:1px solid rgba(0,194,255,.3);border-radius:20px;padding:2.5rem;margin-bottom:3rem;position:relative;overflow:hidden">
+    <div style="background:linear-gradient(135deg,#050810,#0A0D14);border:1px solid rgba(0,194,255,.3);border-radius:20px;padding:2.5rem;margin-bottom:3rem;position:relative;overflow:hidden">
       <div style="position:absolute;inset:0;background:radial-gradient(circle at 50% 0%,rgba(0,194,255,.08),transparent 60%);pointer-events:none"></div>
+      <div class="wc-visual" aria-hidden="true"><div class="wc-box"><span class="wc-tag en">Generic prompt · a list</span><span class="wc-tag ar" style="font-family:Cairo,sans-serif;display:none">برومبت عام · ليستة</span><div class="wc-bars"><i></i><i></i><i></i></div></div><div class="wc-arrow"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#00C2FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M6 13l6 6 6-6"/></svg></div><div class="wc-box on"><span class="wc-tag en">Our system · 30-day sequence</span><span class="wc-tag ar" style="font-family:Cairo,sans-serif;display:none">نظامنا · تسلسل ٣٠ يوم</span><div class="wc-grid"><i style="--i:0"></i><i style="--i:1"></i><i style="--i:2"></i><i style="--i:3"></i><i style="--i:4"></i><i style="--i:5"></i><i style="--i:6"></i><i style="--i:7"></i><i style="--i:8"></i><i style="--i:9"></i><i style="--i:10"></i><i style="--i:11"></i><i style="--i:12"></i><i style="--i:13"></i><i style="--i:14"></i><i style="--i:15"></i><i style="--i:16"></i><i style="--i:17"></i><i style="--i:18"></i><i style="--i:19"></i><i style="--i:20"></i><i style="--i:21"></i><i style="--i:22"></i><i style="--i:23"></i><i style="--i:24"></i><i style="--i:25"></i><i style="--i:26"></i><i style="--i:27"></i><i style="--i:28"></i><i style="--i:29"></i></div></div></div>
       <p class="section-label en" style="position:relative">Why Not Just Use ChatGPT?</p>
       <p class="section-label ar" style="font-family:Cairo,sans-serif;direction:rtl;display:none;position:relative">وليه مش نستخدم شات جي بي تي بس؟</p>
       <p style="font-size:.9rem;color:var(--muted);line-height:1.9;max-width:700px;position:relative;margin-bottom:1.5rem" class="en">Anyone can paste a transcript into an AI tool and get a list of "10 post ideas." That's not what this is. A generic prompt doesn't know your audience, doesn't know your positioning, and doesn't know which 10 minutes of your recording actually matter. It gives you a list. We give you a sequence — a system built around how your audience actually consumes content. We use AI internally to move faster. The strategy, the judgment, and the structure come from us.</p>
@@ -1181,66 +1310,88 @@ body.funnel-mode .funnel-exit-link{display:inline-block}
       </div>
     </div>
 
-    <!-- PRICING -->
     <div id="repurposing-pricing">
-    <p class="section-label en">Pricing</p>
-    <p class="section-label ar" style="font-family:Cairo,sans-serif;direction:rtl;display:none">الأسعار</p>
-    <h3 style="font-family:'Space Grotesk',sans-serif;font-size:1.5rem;font-weight:700;letter-spacing:-.02em;margin-bottom:2rem" class="en">Three Ways to Work Together</h3>
-    <h3 style="font-family:Cairo,sans-serif;font-size:1.4rem;font-weight:700;margin-bottom:2rem;direction:rtl;display:none" class="ar">تلات طرق نشتغل مع بعض بيها</h3>
+    <div class="hero-dark dark-panel" style="background:radial-gradient(circle at 90% 0%,rgba(0,194,255,.14),transparent 45%),radial-gradient(circle at 0% 100%,rgba(0,102,255,.12),transparent 50%),linear-gradient(135deg,#0D0F1A,#05060B);border:1px solid rgba(0,194,255,.3);border-radius:20px;padding:2.5rem 2rem;margin-bottom:3rem;position:relative;overflow:hidden;box-shadow:0 20px 60px rgba(0,20,80,.25)">
+    <p class="section-label en">How We Work Together</p>
+    <p class="section-label ar" style="font-family:Cairo,sans-serif;direction:rtl;display:none">إزاي بنشتغل مع بعض</p>
+    <h3 style="font-family:'Space Grotesk',sans-serif;font-size:1.5rem;font-weight:700;letter-spacing:-.02em;margin-bottom:.6rem" class="en">Every business needs a different content system.</h3>
+    <h3 style="font-family:Cairo,sans-serif;font-size:1.4rem;font-weight:700;margin-bottom:.6rem;direction:rtl;display:none" class="ar">كل بيزنس محتاج نظام محتوى مختلف.</h3>
+    <p style="font-size:.9rem;color:var(--muted);line-height:1.9;max-width:640px;margin-bottom:2rem" class="en">It depends on your goals, your audience, your existing content, and how much execution you want to hand off. These are three levels of engagement — not fixed packages.</p>
+    <p style="font-size:.9rem;color:var(--muted);line-height:2;max-width:640px;margin-bottom:2rem;font-family:Cairo,sans-serif;direction:rtl;display:none" class="ar">وده بيتحدد حسب أهدافك، جمهورك، المحتوى اللي عندك، وقد إيه عايز تسلّم من التنفيذ. دول تلات مستويات تعامل — مش باكدجات ثابتة.</p>
 
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin-bottom:3rem" class="repurposing-3col">
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin-bottom:2.5rem" class="repurposing-3col">
 
-      <div style="background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:2rem">
+      <div class="float-card fc1" style="background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:2rem">
         <p style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.1rem;margin-bottom:.4rem;color:var(--text)" class="en">Strategy</p>
         <p style="font-family:Cairo,sans-serif;font-weight:700;font-size:1.05rem;margin-bottom:.4rem;color:var(--text);direction:rtl;display:none" class="ar">استراتيجية</p>
-        <p style="font-size:.8rem;color:var(--muted);line-height:1.7;margin-bottom:1.25rem" class="en">You produce the final posts — we give you the breakdown and direction.</p>
-        <p style="font-size:.8rem;color:var(--muted);line-height:1.9;font-family:Cairo,sans-serif;direction:rtl;display:none;margin-bottom:1.25rem" class="ar">انت بتنتج البوستات النهائية — إحنا بنديك التحليل والاتجاه.</p>
-        <p style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.4rem;color:#00C2FF;margin-bottom:1.5rem" class="en">$250 – $450 <span style="font-size:.7rem;color:var(--muted);font-weight:500">/ piece</span></p>
-        <p style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.4rem;color:#00C2FF;margin-bottom:1.5rem;direction:rtl;display:none" class="ar">٢٥٠–٤٥٠ دولار <span style="font-size:.7rem;color:var(--muted);font-weight:500" class="ar" style="display:none">/ قطعة</span></p>
+        <p style="font-size:.8rem;color:var(--muted);line-height:1.7;margin-bottom:1.25rem" class="en">Turn your ideas into a clear content direction.</p>
+        <p style="font-size:.8rem;color:var(--muted);line-height:1.9;font-family:Cairo,sans-serif;direction:rtl;display:none;margin-bottom:1.25rem" class="ar">نحوّل أفكارك لاتجاه محتوى واضح.</p>
+        <p style="font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:.85rem" class="en">Focus</p>
+        <p style="font-size:.68rem;letter-spacing:.02em;color:var(--muted);margin-bottom:.85rem;font-family:Cairo,sans-serif;direction:rtl;display:none" class="ar">التركيز</p>
         <ul style="list-style:none;display:flex;flex-direction:column;gap:.65rem">
-                    <li style="display:flex;gap:.55rem;align-items:flex-start"><span style="margin-top:.15rem"><svg viewBox="0 0 24 24" fill="none" stroke="#00C2FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:.95em;height:.95em;flex-shrink:0"><path d="M20 6 9 17l-5-5"/></svg></span><span style="font-size:.8rem;color:var(--muted);line-height:1.6" class="en">Content angle breakdown</span><span style="font-size:.78rem;color:var(--muted);line-height:1.8;font-family:Cairo,sans-serif;direction:rtl;display:none" class="ar">تحليل زوايا المحتوى</span></li>
-          <li style="display:flex;gap:.55rem;align-items:flex-start"><span style="margin-top:.15rem"><svg viewBox="0 0 24 24" fill="none" stroke="#00C2FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:.95em;height:.95em;flex-shrink:0"><path d="M20 6 9 17l-5-5"/></svg></span><span style="font-size:.8rem;color:var(--muted);line-height:1.6" class="en">10 hooks</span><span style="font-size:.78rem;color:var(--muted);line-height:1.8;font-family:Cairo,sans-serif;direction:rtl;display:none" class="ar">10 هوكس</span></li>
-          <li style="display:flex;gap:.55rem;align-items:flex-start"><span style="margin-top:.15rem"><svg viewBox="0 0 24 24" fill="none" stroke="#00C2FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:.95em;height:.95em;flex-shrink:0"><path d="M20 6 9 17l-5-5"/></svg></span><span style="font-size:.8rem;color:var(--muted);line-height:1.6" class="en">Audience insight summary</span><span style="font-size:.78rem;color:var(--muted);line-height:1.8;font-family:Cairo,sans-serif;direction:rtl;display:none" class="ar">ملخص فهم الجمهور</span></li>
-          <li style="display:flex;gap:.55rem;align-items:flex-start"><span style="margin-top:.15rem"><svg viewBox="0 0 24 24" fill="none" stroke="#00C2FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:.95em;height:.95em;flex-shrink:0"><path d="M20 6 9 17l-5-5"/></svg></span><span style="font-size:.8rem;color:var(--muted);line-height:1.6" class="en">30-day direction (topics only)</span><span style="font-size:.78rem;color:var(--muted);line-height:1.8;font-family:Cairo,sans-serif;direction:rtl;display:none" class="ar">خطة 30 يوم (مواضيع بس)</span></li>
+          <li style="display:flex;gap:.55rem;align-items:flex-start"><span style="margin-top:.15rem"><svg viewBox="0 0 24 24" fill="none" stroke="#00C2FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:.95em;height:.95em;flex-shrink:0"><path d="M20 6 9 17l-5-5"/></svg></span><span style="font-size:.8rem;color:var(--muted);line-height:1.6" class="en">Content strategy</span><span style="font-size:.78rem;color:var(--muted);line-height:1.8;font-family:Cairo,sans-serif;direction:rtl;display:none" class="ar">استراتيجية المحتوى</span></li>
+          <li style="display:flex;gap:.55rem;align-items:flex-start"><span style="margin-top:.15rem"><svg viewBox="0 0 24 24" fill="none" stroke="#00C2FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:.95em;height:.95em;flex-shrink:0"><path d="M20 6 9 17l-5-5"/></svg></span><span style="font-size:.8rem;color:var(--muted);line-height:1.6" class="en">Audience insight</span><span style="font-size:.78rem;color:var(--muted);line-height:1.8;font-family:Cairo,sans-serif;direction:rtl;display:none" class="ar">فهم الجمهور</span></li>
+          <li style="display:flex;gap:.55rem;align-items:flex-start"><span style="margin-top:.15rem"><svg viewBox="0 0 24 24" fill="none" stroke="#00C2FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:.95em;height:.95em;flex-shrink:0"><path d="M20 6 9 17l-5-5"/></svg></span><span style="font-size:.8rem;color:var(--muted);line-height:1.6" class="en">Positioning</span><span style="font-size:.78rem;color:var(--muted);line-height:1.8;font-family:Cairo,sans-serif;direction:rtl;display:none" class="ar">التمركز (Positioning)</span></li>
+          <li style="display:flex;gap:.55rem;align-items:flex-start"><span style="margin-top:.15rem"><svg viewBox="0 0 24 24" fill="none" stroke="#00C2FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:.95em;height:.95em;flex-shrink:0"><path d="M20 6 9 17l-5-5"/></svg></span><span style="font-size:.8rem;color:var(--muted);line-height:1.6" class="en">Content angles</span><span style="font-size:.78rem;color:var(--muted);line-height:1.8;font-family:Cairo,sans-serif;direction:rtl;display:none" class="ar">زوايا محتوى</span></li>
+          <li style="display:flex;gap:.55rem;align-items:flex-start"><span style="margin-top:.15rem"><svg viewBox="0 0 24 24" fill="none" stroke="#00C2FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:.95em;height:.95em;flex-shrink:0"><path d="M20 6 9 17l-5-5"/></svg></span><span style="font-size:.8rem;color:var(--muted);line-height:1.6" class="en">Messaging</span><span style="font-size:.78rem;color:var(--muted);line-height:1.8;font-family:Cairo,sans-serif;direction:rtl;display:none" class="ar">الرسالة (Messaging)</span></li>
+          <li style="display:flex;gap:.55rem;align-items:flex-start"><span style="margin-top:.15rem"><svg viewBox="0 0 24 24" fill="none" stroke="#00C2FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:.95em;height:.95em;flex-shrink:0"><path d="M20 6 9 17l-5-5"/></svg></span><span style="font-size:.8rem;color:var(--muted);line-height:1.6" class="en">Content direction</span><span style="font-size:.78rem;color:var(--muted);line-height:1.8;font-family:Cairo,sans-serif;direction:rtl;display:none" class="ar">اتجاه المحتوى</span></li>
         </ul>
       </div>
 
-      <div style="background:linear-gradient(135deg,rgba(0,194,255,.1),rgba(0,102,255,.05));border:1.5px solid rgba(0,194,255,.4);border-radius:16px;padding:2rem;position:relative">
-        <span style="position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:linear-gradient(90deg,#00C2FF,#0066FF);color:#fff;font-size:.68rem;font-weight:700;padding:.3rem .9rem;border-radius:20px;letter-spacing:.03em" class="en">MOST POPULAR</span>
-        <span style="position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:linear-gradient(90deg,#00C2FF,#0066FF);color:#fff;font-size:.68rem;font-weight:700;padding:.3rem .9rem;border-radius:20px;font-family:Cairo,sans-serif;display:none" class="ar">الأكتر طلباً</span>
-        <p style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.1rem;margin-bottom:.4rem;color:var(--text);margin-top:.5rem" class="en">Content System</p>
-        <p style="font-family:Cairo,sans-serif;font-weight:700;font-size:1.05rem;margin-bottom:.4rem;color:var(--text);direction:rtl;display:none;margin-top:.5rem" class="ar">نظام المحتوى</p>
-        <p style="font-size:.8rem;color:var(--muted);line-height:1.7;margin-bottom:1.25rem" class="en">The full, ready-to-publish content library from one piece of content.</p>
-        <p style="font-size:.8rem;color:var(--muted);line-height:1.9;font-family:Cairo,sans-serif;direction:rtl;display:none;margin-bottom:1.25rem" class="ar">المكتبة الكاملة الجاهزة للنشر من قطعة محتوى واحدة.</p>
-        <p style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.4rem;color:#00C2FF;margin-bottom:.15rem" class="en">$600 – $1,200 <span style="font-size:.7rem;color:var(--muted);font-weight:500">/ piece</span></p>
-        <p style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.4rem;color:#00C2FF;margin-bottom:.15rem;direction:rtl;display:none" class="ar">٦٠٠–١٢٠٠ دولار / قطعة</p>
-        <p style="font-size:.7rem;color:var(--muted);margin-bottom:1.5rem" class="en">or $1,800–$3,500/mo for 3-4 pieces</p>
-        <p style="font-size:.7rem;color:var(--muted);margin-bottom:1.5rem;font-family:Cairo,sans-serif;direction:rtl;display:none" class="ar">أو ١٨٠٠–٣٥٠٠ دولار/شهرياً لـ 3-4 قطع</p>
+      <div class="float-card fc2" style="background:linear-gradient(135deg,rgba(0,194,255,.1),rgba(0,102,255,.05));border:1.5px solid rgba(0,194,255,.4);border-radius:16px;padding:2rem;position:relative">
+        <p style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.1rem;margin-bottom:.4rem;color:var(--text)" class="en">Content System</p>
+        <p style="font-family:Cairo,sans-serif;font-weight:700;font-size:1.05rem;margin-bottom:.4rem;color:var(--text);direction:rtl;display:none" class="ar">نظام المحتوى</p>
+        <p style="font-size:.8rem;color:var(--muted);line-height:1.7;margin-bottom:1.25rem" class="en">Turn one strong piece of content into a complete content ecosystem.</p>
+        <p style="font-size:.8rem;color:var(--muted);line-height:1.9;font-family:Cairo,sans-serif;direction:rtl;display:none;margin-bottom:1.25rem" class="ar">نحوّل قطعة محتوى واحدة قوية لمنظومة محتوى كاملة.</p>
+        <p style="font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:#00C2FF;margin-bottom:.85rem" class="en">Focus</p>
+        <p style="font-size:.68rem;letter-spacing:.02em;color:#00C2FF;margin-bottom:.85rem;font-family:Cairo,sans-serif;direction:rtl;display:none" class="ar">التركيز</p>
         <ul style="list-style:none;display:flex;flex-direction:column;gap:.65rem">
-                    <li style="display:flex;gap:.55rem;align-items:flex-start"><span style="margin-top:.15rem"><svg viewBox="0 0 24 24" fill="none" stroke="#00C2FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:.95em;height:.95em;flex-shrink:0"><path d="M20 6 9 17l-5-5"/></svg></span><span style="font-size:.8rem;color:var(--muted);line-height:1.6" class="en">10 short-form video concepts</span><span style="font-size:.78rem;color:var(--muted);line-height:1.8;font-family:Cairo,sans-serif;direction:rtl;display:none" class="ar">10 مفاهيم فيديو قصير</span></li>
-          <li style="display:flex;gap:.55rem;align-items:flex-start"><span style="margin-top:.15rem"><svg viewBox="0 0 24 24" fill="none" stroke="#00C2FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:.95em;height:.95em;flex-shrink:0"><path d="M20 6 9 17l-5-5"/></svg></span><span style="font-size:.8rem;color:var(--muted);line-height:1.6" class="en">10 hooks + 5 carousels</span><span style="font-size:.78rem;color:var(--muted);line-height:1.8;font-family:Cairo,sans-serif;direction:rtl;display:none" class="ar">10 هوكس + 5 كاروسيلات</span></li>
-          <li style="display:flex;gap:.55rem;align-items:flex-start"><span style="margin-top:.15rem"><svg viewBox="0 0 24 24" fill="none" stroke="#00C2FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:.95em;height:.95em;flex-shrink:0"><path d="M20 6 9 17l-5-5"/></svg></span><span style="font-size:.8rem;color:var(--muted);line-height:1.6" class="en">10 captions + 3 long-form posts</span><span style="font-size:.78rem;color:var(--muted);line-height:1.8;font-family:Cairo,sans-serif;direction:rtl;display:none" class="ar">10 كابشن + 3 بوستات طويلة</span></li>
-          <li style="display:flex;gap:.55rem;align-items:flex-start"><span style="margin-top:.15rem"><svg viewBox="0 0 24 24" fill="none" stroke="#00C2FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:.95em;height:.95em;flex-shrink:0"><path d="M20 6 9 17l-5-5"/></svg></span><span style="font-size:.8rem;color:var(--muted);line-height:1.6" class="en">Full 30-day publishing plan</span><span style="font-size:.78rem;color:var(--muted);line-height:1.8;font-family:Cairo,sans-serif;direction:rtl;display:none" class="ar">خطة نشر كاملة 30 يوم</span></li>
+          <li style="display:flex;gap:.55rem;align-items:flex-start"><span style="margin-top:.15rem"><svg viewBox="0 0 24 24" fill="none" stroke="#00C2FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:.95em;height:.95em;flex-shrink:0"><path d="M20 6 9 17l-5-5"/></svg></span><span style="font-size:.8rem;color:var(--muted);line-height:1.6" class="en">Content repurposing</span><span style="font-size:.78rem;color:var(--muted);line-height:1.8;font-family:Cairo,sans-serif;direction:rtl;display:none" class="ar">إعادة توظيف المحتوى</span></li>
+          <li style="display:flex;gap:.55rem;align-items:flex-start"><span style="margin-top:.15rem"><svg viewBox="0 0 24 24" fill="none" stroke="#00C2FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:.95em;height:.95em;flex-shrink:0"><path d="M20 6 9 17l-5-5"/></svg></span><span style="font-size:.8rem;color:var(--muted);line-height:1.6" class="en">Short-form concepts</span><span style="font-size:.78rem;color:var(--muted);line-height:1.8;font-family:Cairo,sans-serif;direction:rtl;display:none" class="ar">مفاهيم فيديو قصير</span></li>
+          <li style="display:flex;gap:.55rem;align-items:flex-start"><span style="margin-top:.15rem"><svg viewBox="0 0 24 24" fill="none" stroke="#00C2FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:.95em;height:.95em;flex-shrink:0"><path d="M20 6 9 17l-5-5"/></svg></span><span style="font-size:.8rem;color:var(--muted);line-height:1.6" class="en">Hooks</span><span style="font-size:.78rem;color:var(--muted);line-height:1.8;font-family:Cairo,sans-serif;direction:rtl;display:none" class="ar">هوكس</span></li>
+          <li style="display:flex;gap:.55rem;align-items:flex-start"><span style="margin-top:.15rem"><svg viewBox="0 0 24 24" fill="none" stroke="#00C2FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:.95em;height:.95em;flex-shrink:0"><path d="M20 6 9 17l-5-5"/></svg></span><span style="font-size:.8rem;color:var(--muted);line-height:1.6" class="en">Carousels</span><span style="font-size:.78rem;color:var(--muted);line-height:1.8;font-family:Cairo,sans-serif;direction:rtl;display:none" class="ar">كاروسيلات</span></li>
+          <li style="display:flex;gap:.55rem;align-items:flex-start"><span style="margin-top:.15rem"><svg viewBox="0 0 24 24" fill="none" stroke="#00C2FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:.95em;height:.95em;flex-shrink:0"><path d="M20 6 9 17l-5-5"/></svg></span><span style="font-size:.8rem;color:var(--muted);line-height:1.6" class="en">Captions</span><span style="font-size:.78rem;color:var(--muted);line-height:1.8;font-family:Cairo,sans-serif;direction:rtl;display:none" class="ar">كابشنز</span></li>
+          <li style="display:flex;gap:.55rem;align-items:flex-start"><span style="margin-top:.15rem"><svg viewBox="0 0 24 24" fill="none" stroke="#00C2FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:.95em;height:.95em;flex-shrink:0"><path d="M20 6 9 17l-5-5"/></svg></span><span style="font-size:.8rem;color:var(--muted);line-height:1.6" class="en">Long-form content</span><span style="font-size:.78rem;color:var(--muted);line-height:1.8;font-family:Cairo,sans-serif;direction:rtl;display:none" class="ar">محتوى طويل</span></li>
+          <li style="display:flex;gap:.55rem;align-items:flex-start"><span style="margin-top:.15rem"><svg viewBox="0 0 24 24" fill="none" stroke="#00C2FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:.95em;height:.95em;flex-shrink:0"><path d="M20 6 9 17l-5-5"/></svg></span><span style="font-size:.8rem;color:var(--muted);line-height:1.6" class="en">Publishing direction</span><span style="font-size:.78rem;color:var(--muted);line-height:1.8;font-family:Cairo,sans-serif;direction:rtl;display:none" class="ar">اتجاه النشر</span></li>
+          <li style="display:flex;gap:.55rem;align-items:flex-start"><span style="margin-top:.15rem"><svg viewBox="0 0 24 24" fill="none" stroke="#00C2FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:.95em;height:.95em;flex-shrink:0"><path d="M20 6 9 17l-5-5"/></svg></span><span style="font-size:.8rem;color:var(--muted);line-height:1.6" class="en">30-day content system</span><span style="font-size:.78rem;color:var(--muted);line-height:1.8;font-family:Cairo,sans-serif;direction:rtl;display:none" class="ar">نظام محتوى لمدة 30 يوم</span></li>
         </ul>
       </div>
 
-      <div style="background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:2rem">
+      <div class="float-card fc3" style="background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:2rem">
         <p style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.1rem;margin-bottom:.4rem;color:var(--text)" class="en">Done For You</p>
         <p style="font-family:Cairo,sans-serif;font-weight:700;font-size:1.05rem;margin-bottom:.4rem;color:var(--text);direction:rtl;display:none" class="ar">دن فور يو</p>
-        <p style="font-size:.8rem;color:var(--muted);line-height:1.7;margin-bottom:1.25rem" class="en">The full system, fully produced — edited clips, designed carousels, scheduled and posted.</p>
-        <p style="font-size:.8rem;color:var(--muted);line-height:1.9;font-family:Cairo,sans-serif;direction:rtl;display:none;margin-bottom:1.25rem" class="ar">النظام كامل، منتج بالكامل — كليبات موضبة، كاروسيلات مصممة، مجدولة ومنشورة.</p>
-        <p style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.4rem;color:#00C2FF;margin-bottom:1.5rem" class="en">$2,000+ <span style="font-size:.7rem;color:var(--muted);font-weight:500">/ month</span></p>
-        <p style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.4rem;color:#00C2FF;margin-bottom:1.5rem;direction:rtl;display:none" class="ar">من ٢٠٠٠ دولار <span style="font-size:.7rem;color:var(--muted);font-weight:500">/ شهرياً</span></p>
+        <p style="font-size:.8rem;color:var(--muted);line-height:1.7;margin-bottom:1.25rem" class="en">We handle the strategy, production, and distribution.</p>
+        <p style="font-size:.8rem;color:var(--muted);line-height:1.9;font-family:Cairo,sans-serif;direction:rtl;display:none;margin-bottom:1.25rem" class="ar">إحنا بنتكفّل بالاستراتيجية والإنتاج والتوزيع.</p>
+        <p style="font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:.85rem" class="en">Focus</p>
+        <p style="font-size:.68rem;letter-spacing:.02em;color:var(--muted);margin-bottom:.85rem;font-family:Cairo,sans-serif;direction:rtl;display:none" class="ar">التركيز</p>
         <ul style="list-style:none;display:flex;flex-direction:column;gap:.65rem">
-                    <li style="display:flex;gap:.55rem;align-items:flex-start"><span style="margin-top:.15rem"><svg viewBox="0 0 24 24" fill="none" stroke="#00C2FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:.95em;height:.95em;flex-shrink:0"><path d="M20 6 9 17l-5-5"/></svg></span><span style="font-size:.8rem;color:var(--muted);line-height:1.6" class="en">Everything in Content System</span><span style="font-size:.78rem;color:var(--muted);line-height:1.8;font-family:Cairo,sans-serif;direction:rtl;display:none" class="ar">كل حاجة في نظام المحتوى</span></li>
-          <li style="display:flex;gap:.55rem;align-items:flex-start"><span style="margin-top:.15rem"><svg viewBox="0 0 24 24" fill="none" stroke="#00C2FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:.95em;height:.95em;flex-shrink:0"><path d="M20 6 9 17l-5-5"/></svg></span><span style="font-size:.8rem;color:var(--muted);line-height:1.6" class="en">Edited short-form clips</span><span style="font-size:.78rem;color:var(--muted);line-height:1.8;font-family:Cairo,sans-serif;direction:rtl;display:none" class="ar">كليبات قصيرة موضبة</span></li>
-          <li style="display:flex;gap:.55rem;align-items:flex-start"><span style="margin-top:.15rem"><svg viewBox="0 0 24 24" fill="none" stroke="#00C2FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:.95em;height:.95em;flex-shrink:0"><path d="M20 6 9 17l-5-5"/></svg></span><span style="font-size:.8rem;color:var(--muted);line-height:1.6" class="en">Designed carousels</span><span style="font-size:.78rem;color:var(--muted);line-height:1.8;font-family:Cairo,sans-serif;direction:rtl;display:none" class="ar">كاروسيلات مصممة</span></li>
-          <li style="display:flex;gap:.55rem;align-items:flex-start"><span style="margin-top:.15rem"><svg viewBox="0 0 24 24" fill="none" stroke="#00C2FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:.95em;height:.95em;flex-shrink:0"><path d="M20 6 9 17l-5-5"/></svg></span><span style="font-size:.8rem;color:var(--muted);line-height:1.6" class="en">Scheduled & posted for you</span><span style="font-size:.78rem;color:var(--muted);line-height:1.8;font-family:Cairo,sans-serif;direction:rtl;display:none" class="ar">مجدولة ومنشورة نيابة عنك</span></li>
+          <li style="display:flex;gap:.55rem;align-items:flex-start"><span style="margin-top:.15rem"><svg viewBox="0 0 24 24" fill="none" stroke="#00C2FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:.95em;height:.95em;flex-shrink:0"><path d="M20 6 9 17l-5-5"/></svg></span><span style="font-size:.8rem;color:var(--muted);line-height:1.6" class="en">Everything in Content System</span><span style="font-size:.78rem;color:var(--muted);line-height:1.8;font-family:Cairo,sans-serif;direction:rtl;display:none" class="ar">كل حاجة في نظام المحتوى</span></li>
+          <li style="display:flex;gap:.55rem;align-items:flex-start"><span style="margin-top:.15rem"><svg viewBox="0 0 24 24" fill="none" stroke="#00C2FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:.95em;height:.95em;flex-shrink:0"><path d="M20 6 9 17l-5-5"/></svg></span><span style="font-size:.8rem;color:var(--muted);line-height:1.6" class="en">Short-form editing</span><span style="font-size:.78rem;color:var(--muted);line-height:1.8;font-family:Cairo,sans-serif;direction:rtl;display:none" class="ar">مونتاج الفيديوهات القصيرة</span></li>
+          <li style="display:flex;gap:.55rem;align-items:flex-start"><span style="margin-top:.15rem"><svg viewBox="0 0 24 24" fill="none" stroke="#00C2FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:.95em;height:.95em;flex-shrink:0"><path d="M20 6 9 17l-5-5"/></svg></span><span style="font-size:.8rem;color:var(--muted);line-height:1.6" class="en">Carousel design</span><span style="font-size:.78rem;color:var(--muted);line-height:1.8;font-family:Cairo,sans-serif;direction:rtl;display:none" class="ar">تصميم الكاروسيلات</span></li>
+          <li style="display:flex;gap:.55rem;align-items:flex-start"><span style="margin-top:.15rem"><svg viewBox="0 0 24 24" fill="none" stroke="#00C2FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:.95em;height:.95em;flex-shrink:0"><path d="M20 6 9 17l-5-5"/></svg></span><span style="font-size:.8rem;color:var(--muted);line-height:1.6" class="en">Content production</span><span style="font-size:.78rem;color:var(--muted);line-height:1.8;font-family:Cairo,sans-serif;direction:rtl;display:none" class="ar">إنتاج المحتوى</span></li>
+          <li style="display:flex;gap:.55rem;align-items:flex-start"><span style="margin-top:.15rem"><svg viewBox="0 0 24 24" fill="none" stroke="#00C2FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:.95em;height:.95em;flex-shrink:0"><path d="M20 6 9 17l-5-5"/></svg></span><span style="font-size:.8rem;color:var(--muted);line-height:1.6" class="en">Scheduling</span><span style="font-size:.78rem;color:var(--muted);line-height:1.8;font-family:Cairo,sans-serif;direction:rtl;display:none" class="ar">جدولة النشر</span></li>
+          <li style="display:flex;gap:.55rem;align-items:flex-start"><span style="margin-top:.15rem"><svg viewBox="0 0 24 24" fill="none" stroke="#00C2FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:.95em;height:.95em;flex-shrink:0"><path d="M20 6 9 17l-5-5"/></svg></span><span style="font-size:.8rem;color:var(--muted);line-height:1.6" class="en">Publishing</span><span style="font-size:.78rem;color:var(--muted);line-height:1.8;font-family:Cairo,sans-serif;direction:rtl;display:none" class="ar">النشر</span></li>
+          <li style="display:flex;gap:.55rem;align-items:flex-start"><span style="margin-top:.15rem"><svg viewBox="0 0 24 24" fill="none" stroke="#00C2FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:.95em;height:.95em;flex-shrink:0"><path d="M20 6 9 17l-5-5"/></svg></span><span style="font-size:.8rem;color:var(--muted);line-height:1.6" class="en">Distribution</span><span style="font-size:.78rem;color:var(--muted);line-height:1.8;font-family:Cairo,sans-serif;direction:rtl;display:none" class="ar">التوزيع</span></li>
         </ul>
       </div>
 
     </div>
+    </div><!-- /dark-panel -->
+
+    <!-- NOT SURE CTA -->
+    <div style="background:linear-gradient(135deg,#FFFFFF,#E8F5FF);border:1px solid rgba(0,194,255,.4);border-radius:20px;padding:2.5rem;text-align:center;position:relative;overflow:hidden;box-shadow:0 14px 40px rgba(0,120,255,.12);color:var(--text)">
+      <div style="position:absolute;inset:0;background:radial-gradient(circle at 50% 0%,rgba(0,194,255,.18),transparent 60%);pointer-events:none"></div>
+      <h3 style="font-family:'Space Grotesk',sans-serif;font-size:clamp(1.3rem,2.6vw,1.8rem);font-weight:700;margin-bottom:.75rem;position:relative" class="en">Not sure what you need?</h3>
+      <h3 style="font-family:Cairo,sans-serif;font-size:clamp(1.2rem,2.6vw,1.6rem);font-weight:700;margin-bottom:.75rem;position:relative;direction:rtl;display:none" class="ar">مش متأكد محتاج إيه؟</h3>
+      <p style="color:var(--muted);font-size:.9rem;line-height:1.8;max-width:520px;margin:0 auto;position:relative" class="en">Every business needs a different content system. Let's figure out what yours actually needs.</p>
+      <p style="color:var(--muted);font-size:.88rem;line-height:2;max-width:520px;margin:0 auto;position:relative;font-family:Cairo,sans-serif;direction:rtl;display:none" class="ar">كل بيزنس محتاج نظام محتوى مختلف. خلينا نحدد إنت فعلاً محتاج إيه.</p>
+      <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-top:1.5rem;position:relative">
+        <a href="https://wa.me/201022996822" target="_blank" class="btn-primary en" style="font-size:.95rem;padding:.8rem 2.2rem;text-decoration:none">Let's Talk</a>
+        <a href="https://wa.me/201022996822" target="_blank" class="btn-primary ar" style="font-family:Cairo,sans-serif;display:none;font-size:.95rem;padding:.8rem 2.2rem;text-decoration:none">يلا نتكلم</a>
+      </div>
     </div>
+    </div>
+
 
     <!-- FAQ -->
     <p class="section-label en">FAQ</p>
@@ -1249,56 +1400,26 @@ body.funnel-mode .funnel-exit-link{display:inline-block}
     <h3 style="font-family:Cairo,sans-serif;font-size:1.4rem;font-weight:700;margin-bottom:2rem;direction:rtl;display:none" class="ar">أسئلة بتتكرر</h3>
 
     <div style="display:flex;flex-direction:column;gap:.85rem;margin-bottom:3rem;max-width:820px" class="repurposing-faq">
-            <div style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:1.25rem 1.5rem">
-        <p style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:.88rem;margin-bottom:.5rem;color:var(--text)" class="en">What kind of content can I send you?</p>
-        <p style="font-family:Cairo,sans-serif;font-weight:700;font-size:.85rem;margin-bottom:.5rem;color:var(--text);direction:rtl;display:none" class="ar">أي نوع محتوى أقدر أبعتلكم؟</p>
-        <p style="font-size:.8rem;color:var(--muted);line-height:1.7" class="en">Any long-form piece: podcast episodes, YouTube videos, webinars, interviews, or recorded talks. Usually 20+ minutes is enough to extract from.</p>
-        <p style="font-size:.78rem;color:var(--muted);line-height:1.9;font-family:Cairo,sans-serif;direction:rtl;display:none" class="ar">أي قطعة محتوى طويلة: حلقات بودكاست، فيديوهات يوتيوب، ويبينارز، مقابلات، أو تسجيلات. عادةً 20+ دقيقة كافية نستخرج منها.</p>
-      </div>
-      <div style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:1.25rem 1.5rem">
-        <p style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:.88rem;margin-bottom:.5rem;color:var(--text)" class="en">Do you edit the videos and design the carousels, or just give me concepts?</p>
-        <p style="font-family:Cairo,sans-serif;font-weight:700;font-size:.85rem;margin-bottom:.5rem;color:var(--text);direction:rtl;display:none" class="ar">بتعملوا مونتاج وتصميم، ولا بس بتديني المفاهيم؟</p>
-        <p style="font-size:.8rem;color:var(--muted);line-height:1.7" class="en">Depends on the package. Strategy and Content System give you the concepts and structure ready to hand to an editor. Done For You includes actual production.</p>
-        <p style="font-size:.78rem;color:var(--muted);line-height:1.9;font-family:Cairo,sans-serif;direction:rtl;display:none" class="ar">على حسب الباكدج. Strategy و Content System بيديك المفاهيم والبنية جاهزة تسلمها لإديتور. Done For You فيه إنتاج فعلي.</p>
-      </div>
-      <div style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:1.25rem 1.5rem">
-        <p style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:.88rem;margin-bottom:.5rem;color:var(--text)" class="en">Is this just AI-generated content?</p>
-        <p style="font-family:Cairo,sans-serif;font-weight:700;font-size:.85rem;margin-bottom:.5rem;color:var(--text);direction:rtl;display:none" class="ar">ده مجرد محتوى AI؟</p>
-        <p style="font-size:.8rem;color:var(--muted);line-height:1.7" class="en">No. We use AI internally to speed up research and production, but every hook, angle, and post is reviewed and structured by us based on your specific audience.</p>
-        <p style="font-size:.78rem;color:var(--muted);line-height:1.9;font-family:Cairo,sans-serif;direction:rtl;display:none" class="ar">لأ. بنستخدم AI جوّه شغلنا عشان نتحرك أسرع، بس كل هوك وزاوية وبوست بنراجعه ونبنيه إحنا حسب جمهورك بالظبط.</p>
-      </div>
-      <div style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:1.25rem 1.5rem">
-        <p style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:.88rem;margin-bottom:.5rem;color:var(--text)" class="en">Can this work for a non-English / Arabic-language podcast or video?</p>
-        <p style="font-family:Cairo,sans-serif;font-weight:700;font-size:.85rem;margin-bottom:.5rem;color:var(--text);direction:rtl;display:none" class="ar">يشتغل مع بودكاست أو فيديو عربي؟</p>
-        <p style="font-size:.8rem;color:var(--muted);line-height:1.7" class="en">Yes — specify the language when you send your content, and the deliverables will be produced in the matching language and dialect.</p>
-        <p style="font-size:.78rem;color:var(--muted);line-height:1.9;font-family:Cairo,sans-serif;direction:rtl;display:none" class="ar">أيوة — حدد اللغة لما تبعت المحتوى، والمخرجات هتتعمل بنفس اللغة واللهجة.</p>
-      </div>
-      <div style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:1.25rem 1.5rem">
-        <p style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:.88rem;margin-bottom:.5rem;color:var(--text)" class="en">Do I own all the content you create?</p>
-        <p style="font-family:Cairo,sans-serif;font-weight:700;font-size:.85rem;margin-bottom:.5rem;color:var(--text);direction:rtl;display:none" class="ar">المحتوى اللي بتعملوه بتاعي أنا؟</p>
-        <p style="font-size:.8rem;color:var(--muted);line-height:1.7" class="en">Yes, full ownership transfers to you once delivered.</p>
-        <p style="font-size:.78rem;color:var(--muted);line-height:1.9;font-family:Cairo,sans-serif;direction:rtl;display:none" class="ar">أيوة، الملكية الكاملة بتبقى ليك بمجرد التسليم.</p>
-      </div>
-      <div style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:1.25rem 1.5rem">
-        <p style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:.88rem;margin-bottom:.5rem;color:var(--text)" class="en">Can I get this on a recurring monthly basis instead of one-off?</p>
-        <p style="font-family:Cairo,sans-serif;font-weight:700;font-size:.85rem;margin-bottom:.5rem;color:var(--text);direction:rtl;display:none" class="ar">أقدر أخد الخدمة شهرياً بدل مرة واحدة؟</p>
-        <p style="font-size:.8rem;color:var(--muted);line-height:1.7" class="en">Yes — most clients move to a monthly retainer once they see the output, so each new recording automatically becomes a month of content.</p>
-        <p style="font-size:.78rem;color:var(--muted);line-height:1.9;font-family:Cairo,sans-serif;direction:rtl;display:none" class="ar">أيوة — أغلب العملاء بيحولوا لاشتراك شهري بعد ما يشوفوا المخرجات، فكل تسجيل جديد يتحول أوتوماتيك لشهر محتوى.</p>
-      </div>
+            <details class="faq-item" style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:1.25rem 1.5rem"><summary class="faq-q"><p style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:.88rem;margin-bottom:.5rem;color:var(--text)" class="en">What kind of content can I send you?</p><p style="font-family:Cairo,sans-serif;font-weight:700;font-size:.85rem;margin-bottom:.5rem;color:var(--text);direction:rtl;display:none" class="ar">أي نوع محتوى أقدر أبعتلكم؟</p><svg class="faq-chev" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#00C2FF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary><div class="faq-a"><p style="font-size:.8rem;color:var(--muted);line-height:1.7" class="en">Any long-form piece: podcast episodes, YouTube videos, webinars, interviews, or recorded talks. Usually 20+ minutes is enough to extract from.</p><p style="font-size:.78rem;color:var(--muted);line-height:1.9;font-family:Cairo,sans-serif;direction:rtl;display:none" class="ar">أي قطعة محتوى طويلة: حلقات بودكاست، فيديوهات يوتيوب، ويبينارز، مقابلات، أو تسجيلات. عادةً 20+ دقيقة كافية نستخرج منها.</p></div></details>
+      <details class="faq-item" style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:1.25rem 1.5rem"><summary class="faq-q"><p style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:.88rem;margin-bottom:.5rem;color:var(--text)" class="en">Do you edit the videos and design the carousels, or just give me concepts?</p><p style="font-family:Cairo,sans-serif;font-weight:700;font-size:.85rem;margin-bottom:.5rem;color:var(--text);direction:rtl;display:none" class="ar">بتعملوا مونتاج وتصميم، ولا بس بتديني المفاهيم؟</p><svg class="faq-chev" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#00C2FF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary><div class="faq-a"><p style="font-size:.8rem;color:var(--muted);line-height:1.7" class="en">Depends on the package. Strategy and Content System give you the concepts and structure ready to hand to an editor. Done For You includes actual production.</p><p style="font-size:.78rem;color:var(--muted);line-height:1.9;font-family:Cairo,sans-serif;direction:rtl;display:none" class="ar">على حسب الباكدج. Strategy و Content System بيديك المفاهيم والبنية جاهزة تسلمها لإديتور. Done For You فيه إنتاج فعلي.</p></div></details>
+      <details class="faq-item" style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:1.25rem 1.5rem"><summary class="faq-q"><p style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:.88rem;margin-bottom:.5rem;color:var(--text)" class="en">Is this just AI-generated content?</p><p style="font-family:Cairo,sans-serif;font-weight:700;font-size:.85rem;margin-bottom:.5rem;color:var(--text);direction:rtl;display:none" class="ar">ده مجرد محتوى AI؟</p><svg class="faq-chev" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#00C2FF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary><div class="faq-a"><p style="font-size:.8rem;color:var(--muted);line-height:1.7" class="en">No. We use AI internally to speed up research and production, but every hook, angle, and post is reviewed and structured by us based on your specific audience.</p><p style="font-size:.78rem;color:var(--muted);line-height:1.9;font-family:Cairo,sans-serif;direction:rtl;display:none" class="ar">لأ. بنستخدم AI جوّه شغلنا عشان نتحرك أسرع، بس كل هوك وزاوية وبوست بنراجعه ونبنيه إحنا حسب جمهورك بالظبط.</p></div></details>
+      <details class="faq-item" style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:1.25rem 1.5rem"><summary class="faq-q"><p style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:.88rem;margin-bottom:.5rem;color:var(--text)" class="en">Can this work for a non-English / Arabic-language podcast or video?</p><p style="font-family:Cairo,sans-serif;font-weight:700;font-size:.85rem;margin-bottom:.5rem;color:var(--text);direction:rtl;display:none" class="ar">يشتغل مع بودكاست أو فيديو عربي؟</p><svg class="faq-chev" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#00C2FF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary><div class="faq-a"><p style="font-size:.8rem;color:var(--muted);line-height:1.7" class="en">Yes — specify the language when you send your content, and the deliverables will be produced in the matching language and dialect.</p><p style="font-size:.78rem;color:var(--muted);line-height:1.9;font-family:Cairo,sans-serif;direction:rtl;display:none" class="ar">أيوة — حدد اللغة لما تبعت المحتوى، والمخرجات هتتعمل بنفس اللغة واللهجة.</p></div></details>
+      <details class="faq-item" style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:1.25rem 1.5rem"><summary class="faq-q"><p style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:.88rem;margin-bottom:.5rem;color:var(--text)" class="en">Do I own all the content you create?</p><p style="font-family:Cairo,sans-serif;font-weight:700;font-size:.85rem;margin-bottom:.5rem;color:var(--text);direction:rtl;display:none" class="ar">المحتوى اللي بتعملوه بتاعي أنا؟</p><svg class="faq-chev" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#00C2FF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary><div class="faq-a"><p style="font-size:.8rem;color:var(--muted);line-height:1.7" class="en">Yes, full ownership transfers to you once delivered.</p><p style="font-size:.78rem;color:var(--muted);line-height:1.9;font-family:Cairo,sans-serif;direction:rtl;display:none" class="ar">أيوة، الملكية الكاملة بتبقى ليك بمجرد التسليم.</p></div></details>
+      <details class="faq-item" style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:1.25rem 1.5rem"><summary class="faq-q"><p style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:.88rem;margin-bottom:.5rem;color:var(--text)" class="en">Can I get this on a recurring monthly basis instead of one-off?</p><p style="font-family:Cairo,sans-serif;font-weight:700;font-size:.85rem;margin-bottom:.5rem;color:var(--text);direction:rtl;display:none" class="ar">أقدر أخد الخدمة شهرياً بدل مرة واحدة؟</p><svg class="faq-chev" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#00C2FF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary><div class="faq-a"><p style="font-size:.8rem;color:var(--muted);line-height:1.7" class="en">Yes — most clients move to a monthly retainer once they see the output, so each new recording automatically becomes a month of content.</p><p style="font-size:.78rem;color:var(--muted);line-height:1.9;font-family:Cairo,sans-serif;direction:rtl;display:none" class="ar">أيوة — أغلب العملاء بيحولوا لاشتراك شهري بعد ما يشوفوا المخرجات، فكل تسجيل جديد يتحول أوتوماتيك لشهر محتوى.</p></div></details>
     </div>
 
     <!-- FINAL CTA -->
-    <div style="background:linear-gradient(135deg,#001A3D,#0A1628);border:1px solid rgba(0,194,255,.3);border-radius:20px;padding:3rem 2.5rem;text-align:center;position:relative;overflow:hidden">
-      <div style="position:absolute;inset:0;background:radial-gradient(circle at 50% 0%,rgba(0,194,255,.1),transparent 60%);pointer-events:none"></div>
+    <div style="background:linear-gradient(135deg,#FFFFFF,#E8F5FF);border:1px solid rgba(0,194,255,.4);border-radius:20px;padding:3rem 2.5rem;text-align:center;position:relative;overflow:hidden;box-shadow:0 14px 40px rgba(0,120,255,.12);color:var(--text)">
+      <div style="position:absolute;inset:0;background:radial-gradient(circle at 50% 0%,rgba(0,194,255,.18),transparent 60%);pointer-events:none"></div>
       <h3 style="font-family:'Space Grotesk',sans-serif;font-size:clamp(1.5rem,3vw,2.2rem);font-weight:700;margin-bottom:.85rem;position:relative" class="en">Stop creating more content.<br/>Start multiplying what you have.</h3>
       <h3 style="font-family:Cairo,sans-serif;font-size:clamp(1.4rem,3vw,2rem);font-weight:700;margin-bottom:.85rem;position:relative;direction:rtl;display:none" class="ar">بطّل تعمل محتوى أكتر.<br/>ابدأ ضاعف اللي عندك.</h3>
       <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-top:1.5rem">
-        <a href="https://wa.me/201022996822" target="_blank" class="btn-primary en" style="font-size:1rem;padding:.85rem 2.5rem;text-decoration:none;background:linear-gradient(90deg,#25D366,#128C7E)"><svg viewBox="0 0 24 24" fill="none" stroke="#00C2FF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block;vertical-align:-0.15em"><path d="M21 11.5a8.5 8.5 0 0 1-8.5 8.5 8.4 8.4 0 0 1-4-1L3 20l1.1-4.2A8.4 8.4 0 0 1 3 11.5 8.5 8.5 0 0 1 11.5 3 8.5 8.5 0 0 1 21 11.5Z"/></svg> Send Us Your Next Episode</a>
-        <a href="https://wa.me/201022996822" target="_blank" class="btn-primary ar" style="font-family:Cairo,sans-serif;display:none;font-size:1rem;padding:.85rem 2.5rem;text-decoration:none;background:linear-gradient(90deg,#25D366,#128C7E)"><svg viewBox="0 0 24 24" fill="none" stroke="#00C2FF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block;vertical-align:-0.15em"><path d="M21 11.5a8.5 8.5 0 0 1-8.5 8.5 8.4 8.4 0 0 1-4-1L3 20l1.1-4.2A8.4 8.4 0 0 1 3 11.5 8.5 8.5 0 0 1 11.5 3 8.5 8.5 0 0 1 21 11.5Z"/></svg> ابعتلنا الحلقة الجاية</a>
+        <a href="https://wa.me/201022996822" target="_blank" class="btn-primary en" style="font-size:1rem;padding:.85rem 2.5rem;text-decoration:none"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block;vertical-align:-0.15em"><path d="M21 11.5a8.5 8.5 0 0 1-8.5 8.5 8.4 8.4 0 0 1-4-1L3 20l1.1-4.2A8.4 8.4 0 0 1 3 11.5 8.5 8.5 0 0 1 11.5 3 8.5 8.5 0 0 1 21 11.5Z"/></svg> Send Us Your Next Episode</a>
+        <a href="https://wa.me/201022996822" target="_blank" class="btn-primary ar" style="font-family:Cairo,sans-serif;display:none;font-size:1rem;padding:.85rem 2.5rem;text-decoration:none"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block;vertical-align:-0.15em"><path d="M21 11.5a8.5 8.5 0 0 1-8.5 8.5 8.4 8.4 0 0 1-4-1L3 20l1.1-4.2A8.4 8.4 0 0 1 3 11.5 8.5 8.5 0 0 1 11.5 3 8.5 8.5 0 0 1 21 11.5Z"/></svg> ابعتلنا الحلقة الجاية</a>
       </div>
     </div>
 
-    <div class="section-footer"><p class="footer-copy">© 2026 Youssuf Walid</p><p class="footer-brand">HALAL REELS<span>.</span></p></div>
+    
   </div>
 
   <style>
@@ -1396,7 +1517,7 @@ body.funnel-mode .funnel-exit-link{display:inline-block}
 </section>
 
 
-<section id="section-pillars">
+<section id="section-pillars" class="theme-light">
   <div class="section-wrap">
     <p class="section-label en">Our Approach</p>
     <p class="section-label ar" style="font-family:Cairo,sans-serif;direction:rtl;display:none">منهجنا</p>
@@ -1404,7 +1525,7 @@ body.funnel-mode .funnel-exit-link{display:inline-block}
     <h2 class="section-title ar" style="font-family:Cairo,sans-serif;direction:rtl;display:none">بنبني على إيه</h2>
     <div class="pillars-grid">
       <div class="pillar-card">
-        <div class="pillar-img" style="background:linear-gradient(135deg,#0A1628,#00274D);overflow:hidden">
+        <div class="pillar-img" style="background:linear-gradient(135deg,#0A0D14,#060A12);overflow:hidden">
           <img src="https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=800&q=80" alt="Creative" style="width:100%;height:100%;object-fit:cover;opacity:.75;position:absolute;inset:0"/>
           <div class="pillar-overlay" style="background:linear-gradient(135deg,rgba(0,10,30,.5),rgba(0,102,255,.15));position:absolute;inset:0"></div>
         </div>
@@ -1414,7 +1535,7 @@ body.funnel-mode .funnel-exit-link{display:inline-block}
         <p class="pillar-desc ar" style="font-family:Cairo,sans-serif;direction:rtl;display:none">بعمل كونتنت الناس عايزة تشوفه. بسمع للجمهور مش بس للخوارزميات — وبابني أفكار بتعمل صلة حقيقية. بوست واحد صح ممكن يأثر أكتر من كامبين كامل.</p>
       </div>
       <div class="pillar-card">
-        <div class="pillar-img" style="background:linear-gradient(135deg,#0A1628,#001A3D);overflow:hidden">
+        <div class="pillar-img" style="background:linear-gradient(135deg,#0A0D14,#050810);overflow:hidden">
           <img src="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=800&q=80" alt="AI Systems" style="width:100%;height:100%;object-fit:cover;opacity:.75;position:absolute;inset:0"/>
           <div class="pillar-overlay" style="background:linear-gradient(135deg,rgba(0,10,30,.5),rgba(0,102,255,.15));position:absolute;inset:0"></div>
         </div>
@@ -1424,7 +1545,7 @@ body.funnel-mode .funnel-exit-link{display:inline-block}
         <p class="pillar-desc ar" style="font-family:Cairo,sans-serif;direction:rtl;display:none">مش بس وصول — نتايج حقيقية. بابني سيستمز AI بتفهم فين الجمهور فعلاً بيقضي وقته وبتحول الانتباه لنتايج بيزنس على نطاق واسع.</p>
       </div>
       <div class="pillar-card">
-        <div class="pillar-img" style="background:linear-gradient(135deg,#050D1A,#0A1628);overflow:hidden">
+        <div class="pillar-img" style="background:linear-gradient(135deg,#05060B,#0A0D14);overflow:hidden">
           <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80" alt="Strategy" style="width:100%;height:100%;object-fit:cover;opacity:.75;position:absolute;inset:0"/>
           <div class="pillar-overlay" style="background:linear-gradient(135deg,rgba(0,10,30,.5),rgba(0,66,255,.15));position:absolute;inset:0"></div>
         </div>
@@ -1434,8 +1555,7 @@ body.funnel-mode .funnel-exit-link{display:inline-block}
         <p class="pillar-desc ar" style="font-family:Cairo,sans-serif;direction:rtl;display:none">بحط الإنسان في مقدمة كل حاجة — وبتأكد إن الأفكار ذات صلة ثقافياً. أكتر طريقة نمو فعالة هي فهم الناس كأفراد مش جمهور ضخم.</p>
       </div>
     </div>
-    <div class="section-footer"><p class="footer-copy">© 2026 Youssuf Walid</p><p class="footer-brand">HALAL REELS<span>.</span></p>
-  </div>
+    
 </section>
 
 
@@ -1526,7 +1646,7 @@ body.funnel-mode .funnel-exit-link{display:inline-block}
 </section>
 
 
-<section id="section-work">
+<section id="section-work" class="theme-light">
   <div class="section-wrap">
     <p class="section-label en">Selected Work</p>
     <p class="section-label ar" style="font-family:Cairo,sans-serif;direction:rtl;display:none">من شغلي</p>
@@ -1562,8 +1682,7 @@ body.funnel-mode .funnel-exit-link{display:inline-block}
       <div class="content-card"><div class="content-thumb" style="background:#111"><div class="content-grd"></div><div class="content-arabic">مفيش passive income قبل مليون دولار</div><div class="content-bar"></div></div><div class="content-meta"><div class="content-type en">Finance Reality</div><div class="content-type ar" style="font-family:Cairo,sans-serif;display:none">واقع مالي</div><div class="content-sub">Reels · Arabic</div></div></div>
     </div>
     <div class="os-banner" style="margin-top:2.5rem"><div class="os-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#00C2FF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block;vertical-align:-0.15em" ><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8Z"/></svg></div><div><div class="os-title en">Currently Building: Content OS + Interest Media</div><div class="os-title ar" style="font-family:Cairo,sans-serif;direction:rtl;display:none">شغّال دلوقتي على: Content OS + Interest Media</div><p class="os-desc en">A scalable framework for producing consistent, high-quality content at speed using AI — turning expertise into media assets.</p><p class="os-desc ar" style="font-family:Cairo,sans-serif;direction:rtl;display:none">فريمورك قابل للتوسع لإنتاج كونتنت ثابت وعالي الجودة بالـ AI — بيحوّل الخبرة لأصول ميديا.</p></div></div>
-    <div class="section-footer"><p class="footer-copy">© 2026 Youssuf Walid</p><p class="footer-brand">HALAL REELS<span>.</span></p>
-  </div>
+    
 </section>
 
 
@@ -1806,14 +1925,14 @@ body.funnel-mode .funnel-exit-link{display:inline-block}
 </section>
 
 
-<section id="section-coaching">
+<section id="section-coaching" class="theme-light">
   <div class="section-wrap">
     <!-- HERO BANNER -->
     <div style="background:linear-gradient(135deg,rgba(0,194,255,.1),rgba(0,102,255,.05));border:1px solid rgba(0,194,255,.2);border-radius:20px;padding:3rem 2.5rem;margin-bottom:3rem;position:relative;overflow:hidden">
       <div style="position:absolute;top:-50px;right:-50px;width:250px;height:250px;background:radial-gradient(circle,rgba(0,194,255,.12),transparent 70%);pointer-events:none"></div>
       <p class="section-label en" style="margin-bottom:1rem">1-on-1 Coaching</p>
       <p class="section-label ar" style="font-family:Cairo,sans-serif;direction:rtl;display:none;margin-bottom:1rem">كوتشنج فردي</p>
-      <h2 style="font-family:'Space Grotesk',sans-serif;font-size:clamp(1.8rem,4vw,3rem);font-weight:700;letter-spacing:-.03em;line-height:1.1;margin-bottom:1rem;max-width:600px" class="en">Stop Drowning in Information.<br/>Start Building.</h2>
+      <h2 style="font-family:'Space Grotesk',sans-serif;font-size:clamp(1.8rem,4vw,3rem);font-weight:700;letter-spacing:-.03em;line-height:1.1;margin-bottom:1rem;max-width:600px;text-shadow:0 0 50px rgba(0,194,255,.18)" class="en">Stop Drowning in Information.<br/>Start Building.</h2>
       <h2 style="font-family:Cairo,sans-serif;font-size:clamp(1.6rem,4vw,2.6rem);font-weight:700;line-height:1.3;margin-bottom:1rem;direction:rtl;display:none" class="ar">بطّل تغرق في المعلومات.<br/>ابدأ تبني.</h2>
       <p style="color:var(--muted);font-size:1rem;line-height:1.9;max-width:560px" class="en">For freelancers and beginners who want to build a real presence online, make money from their skills, and finally get clarity — without wasting years figuring it out alone.</p>
       <p style="color:var(--muted);font-size:1rem;line-height:2;max-width:560px;font-family:Cairo,sans-serif;direction:rtl;display:none" class="ar">للفريلانسرز والمبتدئين اللي عايزين يبنوا حضور حقيقي أونلاين، يكسبوا من مهاراتهم، ويلاقوا الوضوح — من غير ما يضيعوا سنين يتقنوا لوحدهم.</p>
@@ -1833,7 +1952,7 @@ body.funnel-mode .funnel-exit-link{display:inline-block}
 
     <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin-bottom:3rem" class="problems-grid">
 
-      <div style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:1.5rem;display:flex;gap:1rem;align-items:flex-start;transition:border-color .3s" onmouseover="this.style.borderColor='rgba(0,194,255,.3)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.07)'">
+      <div style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:1.5rem;display:flex;gap:1rem;align-items:flex-start;transition:border-color .3s" onmouseover="this.style.borderColor='rgba(0,194,255,.3)'" onmouseout="this.style.borderColor='rgba(10,20,60,0.10)'">
         <div style="width:40px;height:40px;background:rgba(0,194,255,.1);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0"><svg viewBox="0 0 24 24" fill="none" stroke="#00C2FF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block;vertical-align:-0.15em" ><circle cx="12" cy="12" r="9"/><path d="m9 9 2 2m0-2-2 2M13 9l2 2m0-2-2 2M9 16c1-1 5-1 6 0"/></svg></div>
         <div>
           <p style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:.9rem;margin-bottom:.35rem;color:var(--text)" class="en">Information Overload</p>
@@ -1843,7 +1962,7 @@ body.funnel-mode .funnel-exit-link{display:inline-block}
         </div>
       </div>
 
-      <div style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:1.5rem;display:flex;gap:1rem;align-items:flex-start;transition:border-color .3s" onmouseover="this.style.borderColor='rgba(0,194,255,.3)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.07)'">
+      <div style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:1.5rem;display:flex;gap:1rem;align-items:flex-start;transition:border-color .3s" onmouseover="this.style.borderColor='rgba(0,194,255,.3)'" onmouseout="this.style.borderColor='rgba(10,20,60,0.10)'">
         <div style="width:40px;height:40px;background:rgba(0,194,255,.1);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0"><svg viewBox="0 0 24 24" fill="none" stroke="#00C2FF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block;vertical-align:-0.15em" ><circle cx="12" cy="12" r="9"/><path d="M9.5 15c0 1 1 1.5 2.5 1.5s2.5-.5 2.5-1.5-1-1.4-2.5-1.7-2.5-.7-2.5-1.7 1-1.5 2.5-1.5 2.3.5 2.5 1.3"/><path d="M12 7.5v1M12 15.5v1"/></svg></div>
         <div>
           <p style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:.9rem;margin-bottom:.35rem;color:var(--text)" class="en">Don't Know How to Make Money Online</p>
@@ -1853,7 +1972,7 @@ body.funnel-mode .funnel-exit-link{display:inline-block}
         </div>
       </div>
 
-      <div style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:1.5rem;display:flex;gap:1rem;align-items:flex-start;transition:border-color .3s" onmouseover="this.style.borderColor='rgba(0,194,255,.3)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.07)'">
+      <div style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:1.5rem;display:flex;gap:1rem;align-items:flex-start;transition:border-color .3s" onmouseover="this.style.borderColor='rgba(0,194,255,.3)'" onmouseout="this.style.borderColor='rgba(10,20,60,0.10)'">
         <div style="width:40px;height:40px;background:rgba(0,194,255,.1);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0"><svg viewBox="0 0 24 24" fill="none" stroke="#00C2FF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block;vertical-align:-0.15em" ><circle cx="12" cy="12" r="9"/><path d="m15 9-4 2-2 4 4-2 2-4Z"/></svg></div>
         <div>
           <p style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:.9rem;margin-bottom:.35rem;color:var(--text)" class="en">No Social Media Presence</p>
@@ -1863,7 +1982,7 @@ body.funnel-mode .funnel-exit-link{display:inline-block}
         </div>
       </div>
 
-      <div style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:1.5rem;display:flex;gap:1rem;align-items:flex-start;transition:border-color .3s" onmouseover="this.style.borderColor='rgba(0,194,255,.3)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.07)'">
+      <div style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:1.5rem;display:flex;gap:1rem;align-items:flex-start;transition:border-color .3s" onmouseover="this.style.borderColor='rgba(0,194,255,.3)'" onmouseout="this.style.borderColor='rgba(10,20,60,0.10)'">
         <div style="width:40px;height:40px;background:rgba(0,194,255,.1);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0"><svg viewBox="0 0 24 24" fill="none" stroke="#00C2FF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block;vertical-align:-0.15em" ><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.3" fill="#00C2FF"/></svg></div>
         <div>
           <p style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:.9rem;margin-bottom:.35rem;color:var(--text)" class="en">Don't Know Which Skill to Learn</p>
@@ -1873,7 +1992,7 @@ body.funnel-mode .funnel-exit-link{display:inline-block}
         </div>
       </div>
 
-      <div style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:1.5rem;display:flex;gap:1rem;align-items:flex-start;transition:border-color .3s" onmouseover="this.style.borderColor='rgba(0,194,255,.3)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.07)'">
+      <div style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:1.5rem;display:flex;gap:1rem;align-items:flex-start;transition:border-color .3s" onmouseover="this.style.borderColor='rgba(0,194,255,.3)'" onmouseout="this.style.borderColor='rgba(10,20,60,0.10)'">
         <div style="width:40px;height:40px;background:rgba(0,194,255,.1);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0"><svg viewBox="0 0 24 24" fill="none" stroke="#00C2FF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block;vertical-align:-0.15em" ><circle cx="12" cy="12" r="9"/><path d="M9.5 9a2.5 2.5 0 1 1 3.7 2.2c-.9.5-1.2 1-1.2 1.8"/><path d="M12 17h.01"/></svg></div>
         <div>
           <p style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:.9rem;margin-bottom:.35rem;color:var(--text)" class="en">Passion vs. Monetization Confusion</p>
@@ -1883,7 +2002,7 @@ body.funnel-mode .funnel-exit-link{display:inline-block}
         </div>
       </div>
 
-      <div style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:1.5rem;display:flex;gap:1rem;align-items:flex-start;transition:border-color .3s" onmouseover="this.style.borderColor='rgba(0,194,255,.3)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.07)'">
+      <div style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:1.5rem;display:flex;gap:1rem;align-items:flex-start;transition:border-color .3s" onmouseover="this.style.borderColor='rgba(0,194,255,.3)'" onmouseout="this.style.borderColor='rgba(10,20,60,0.10)'">
         <div style="width:40px;height:40px;background:rgba(0,194,255,.1);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0"><svg viewBox="0 0 24 24" fill="none" stroke="#00C2FF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block;vertical-align:-0.15em" ><path d="M4 4.5A2.5 2.5 0 0 1 6.5 2H20v16H6.5A2.5 2.5 0 0 0 4 20.5v-16Z"/><path d="M4 20.5A2.5 2.5 0 0 1 6.5 18H20"/></svg></div>
         <div>
           <p style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:.9rem;margin-bottom:.35rem;color:var(--text)" class="en">Wrong Resources, Wasted Time</p>
@@ -1954,7 +2073,7 @@ body.funnel-mode .funnel-exit-link{display:inline-block}
     </div>
 
     <!-- CTA BANNER -->
-    <div style="background:linear-gradient(135deg,#001A3D,#0A1628);border:1px solid rgba(0,194,255,.3);border-radius:20px;padding:3rem 2.5rem;text-align:center;position:relative;overflow:hidden">
+    <div style="background:linear-gradient(135deg,#050810,#0A0D14);border:1px solid rgba(0,194,255,.3);border-radius:20px;padding:3rem 2.5rem;text-align:center;position:relative;overflow:hidden">
       <div style="position:absolute;inset:0;background:radial-gradient(circle at 50% 0%,rgba(0,194,255,.1),transparent 60%);pointer-events:none"></div>
       <p style="font-size:.75rem;letter-spacing:.15em;color:#00C2FF;text-transform:uppercase;font-weight:500;margin-bottom:.85rem" class="en">LIMITED SPOTS</p>
       <p style="font-size:.75rem;letter-spacing:.15em;color:#00C2FF;text-transform:uppercase;font-weight:500;margin-bottom:.85rem;font-family:Cairo,sans-serif;direction:rtl;display:none" class="ar">أماكن محدودة</p>
@@ -1970,7 +2089,7 @@ body.funnel-mode .funnel-exit-link{display:inline-block}
       </div>
     </div>
 
-    <div class="section-footer"><p class="footer-copy">© 2026 Youssuf Walid</p><p class="footer-brand">HALAL REELS<span>.</span></p></div>
+    
   </div>
 </div>
 
@@ -2212,5 +2331,12 @@ setTimeout(initAnimations, 100);
 
 </script>
 
+<script>
+document.querySelectorAll('.repurposing-faq .faq-item').forEach(function(d){
+  d.addEventListener('toggle',function(){
+    if(d.open){document.querySelectorAll('.repurposing-faq .faq-item[open]').forEach(function(o){if(o!==d)o.open=false;});}
+  });
+});
+</script>
 </body>
 </html>
